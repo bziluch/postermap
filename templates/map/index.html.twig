@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container" {{ stimulus_controller('map') }}>
+        <div class="map" {{ stimulus_target('map', 'map') }}></div>
+    </div>
+{% endblock body %}

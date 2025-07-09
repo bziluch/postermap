@@ -21,6 +21,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@symfony/stimulus-bridge": "github:symfony/stimulus-bridge"
+        "@symfony/stimulus-bridge": "github:symfony/stimulus-bridge",
+        "leaflet": "^1.9.4"
     }
 }
