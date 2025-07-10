@@ -21,7 +21,7 @@ class Poster
     private ?float $longitude = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
-    private ?int $status = null;
+    private ?int $status = 0;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $createDate = null;
@@ -31,6 +31,12 @@ class Poster
 
     #[ORM\ManyToOne(inversedBy: 'posters')]
     private ?User $author = null;
+
+    public function __construct(float $lat, float $lon) {
+        $this->setLatitude($lat);
+        $this->setLongitude($lon);
+        $this->setCreateDate(new \DateTime('now'));
+    }
 
     public function getId(): ?int
     {
